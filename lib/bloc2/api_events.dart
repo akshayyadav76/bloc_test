@@ -1,4 +1,5 @@
 import './api_bloc.dart';
+import 'package:http/http.dart'as http;
 
 abstract class ApiEvents {}
 
@@ -11,9 +12,13 @@ abstract class ApiEvents {}
      resolvHttp(bloc);
    }
 
-   void resolvHttp(ApiBloc2 bloc){
-       const _catFactsUrl = 'https://cat-fact.herokuapp.com/facts';
+   void resolvHttp(ApiBloc2 bloc)async{
+       const _url = 'https://cat-fact.herokuapp.com/facts';
        bloc.add(Loading());
+      var response = await http.get(_url);
+      
+
+
        
    }
  
