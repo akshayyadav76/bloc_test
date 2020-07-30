@@ -22,8 +22,11 @@ class HomeScreen extends StatelessWidget {
            if(mystate.dataCheck == Check.Loading){
              return Center(child:CircularProgressIndicator());
            }else if(mystate.dataCheck == Check.Sucss){
-             Text(mystate.data[1])
+             return ListView.builder(
+               itemCount: mystate.data.length,
+               itemBuilder: (context,index)=>Text(mystate.data[index].text) );
            }
+           return Text("do");
            
          }
       )

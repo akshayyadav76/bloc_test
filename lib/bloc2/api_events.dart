@@ -34,7 +34,7 @@ abstract class ApiEvents {}
 
  class ApiSuccess extends ApiEvents{
    List<ApiFacts> seeData;
-   
+
    ApiSuccess(this.seeData);
    
  }
