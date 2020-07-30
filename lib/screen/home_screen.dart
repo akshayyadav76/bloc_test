@@ -9,14 +9,14 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var objBloc = 
+    var objBloc = BlocProvider.of<ApiBloc2>(context);
     return Scaffold(
       appBar: AppBar(title: Text("api bloc 2"),
       actions: <Widget>[
         Text("0",textAlign: TextAlign.center,style: TextStyle(fontSize: 25))
       ],),
       body: BlocBuilder<ApiBloc2,ApiState>(
-
+        bloc: objBloc,
          builder: (context,mystate){
            if(mystate.dataCheck == Check.Loading){
              return Center(child:CircularProgressIndicator());
