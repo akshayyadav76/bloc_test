@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import './screen/home_screen.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import './bloc2/api_bloc.dart';
+import './bloc2/api_state.dart';
 
 
 void main() {
@@ -20,9 +21,8 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: BlocBuilder(
-        bloc: ApiBloc2(),
-         builder: (context,),
+      home: BlocProvider(
+        create: (context)=>ApiBloc2(ApiState()),
         child: HomeScreen())
     );
   }
