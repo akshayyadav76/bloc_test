@@ -9,6 +9,7 @@ class HomeScreen extends StatelessWidget {
       actions: <Widget>[
         Text("0",textAlign: TextAlign.center,style: TextStyle(fontSize: 25))
       ],),
+      body: Text("data"),
     );
   }
 }
