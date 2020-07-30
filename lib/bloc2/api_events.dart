@@ -6,8 +6,11 @@ abstract class ApiEvents {}
 
  }
  class Fetch extends ApiEvents{
-  
    Fetch(ApiBloc2 bloc);
+
+   void resolvHttp(bloc){
+     
+   }
   static const _catFactsUrl = 'https://cat-fact.herokuapp.com/facts';
   
   
