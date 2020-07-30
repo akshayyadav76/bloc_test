@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
-import 'screens/counter_page.dart';
 import "package:flutter_bloc/flutter_bloc.dart";
-import './bloc/blocs/counter_bloc.dart';
-import './screens/api_facts_screen.dart';
-import './bloc/blocs/api_bloc.dart';
+
 
 
 
@@ -21,12 +18,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: MultiBlocProvider(
-        providers: [
-          BlocProvider<CounterBloc>(create:(context)=>CounterBloc()),
-          BlocProvider<ApiBloc>(create:(context)=> ApiBloc())
-        ],
-        child: ApiFactsScreen(apiFactsBloc: ApiBloc())),
+      home: Text("d")
     );
   }
 }
