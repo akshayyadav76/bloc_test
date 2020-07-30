@@ -21,6 +21,8 @@ class HomeScreen extends StatelessWidget {
          builder: (context,mystate){
            if(mystate.dataCheck == Check.Loading){
              return Center(child:CircularProgressIndicator());
+           }else if(mystate.dataCheck == Check.Sucss){
+             Text(mystate.data[1])
            }
            
          }
