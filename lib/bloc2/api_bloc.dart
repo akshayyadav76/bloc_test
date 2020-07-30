@@ -15,7 +15,10 @@ class ApiBloc2 extends Bloc<ApiEvents,ApiState>{
    if(event is Loading){
       newState.dataCheck =Check.Loading;
       yield newState;
+   }else if(event is ApiSuccess){
+     newState.data=  ApiSucces
    }
+
     throw UnimplementedError();
   }
 }

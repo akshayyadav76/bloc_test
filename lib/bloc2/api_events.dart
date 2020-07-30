@@ -33,6 +33,7 @@ abstract class ApiEvents {}
  }
 
  class ApiSuccess extends ApiEvents{
-   ApiSuccess(List allData)
+   List<ApiFacts> seeData;
+   ApiSuccess(this.seeData);
    
  }
