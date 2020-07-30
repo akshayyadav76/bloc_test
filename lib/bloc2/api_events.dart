@@ -1,4 +1,4 @@
-
+import './api_bloc.dart';
 
 abstract class ApiEvents {}
 
@@ -6,7 +6,8 @@ abstract class ApiEvents {}
 
  }
  class Fetch extends ApiEvents{
-   
+  static const _catFactsUrl = 'https://cat-fact.herokuapp.com/facts';
+  ApiBloc2.
 
  }
 
