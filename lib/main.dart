@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 import './screen/home_screen.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import './bloc2/api_bloc.dart';
 
 
 void main() {
@@ -18,7 +20,10 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: HomeScreen()
+      home: BlocBuilder(
+        bloc: ApiBloc2(),
+         builder: (context,),
+        child: HomeScreen())
     );
   }
 }
