@@ -8,10 +8,13 @@ class ApiBloc2 extends Bloc<ApiEvents,ApiState>{
   ApiBloc2(ApiState initialState) : super(initialState);
 
 
+
   @override
   Stream<ApiState> mapEventToState(event)async* {
+   var newState = state;
    if(event is Loading){
-      yield state;
+      newState.dataCheck =Check.Loading;
+      yield newState;
    }
     throw UnimplementedError();
   }
